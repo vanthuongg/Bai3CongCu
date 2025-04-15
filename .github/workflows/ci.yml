@@ -1,0 +1,15 @@
+name: CI Pipeline
+
+on:
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Kiểm tra Pull Request
+      run: echo "PR được tạo - kiểm tra tự động"
